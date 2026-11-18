@@ -1,0 +1,133 @@
+:root {
+    --lime: #cbe896;
+    --sage: #aac0aa;
+    --cream: #fcdfa6;
+    --clay: #a18276;
+    --peach: #f4b886;
+    --ink: #243629;
+    --paper: #fffaf2;
+}
+
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 5rem;
+}
+
+body {
+    background-color: var(--paper);
+    color: var(--ink);
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+}
+
+h1, h2, h3, .navbar-brand {
+    font-family: Georgia, serif;
+}
+
+.hotel-nav {
+    background-color: var(--sage);
+    border-bottom: 2px solid var(--clay);
+}
+
+.hotel-nav .navbar-brand,
+.hotel-nav .nav-link {
+    color: var(--ink);
+}
+
+.hotel-nav .nav-link:hover,
+.hotel-nav .nav-link:focus-visible {
+    text-decoration: underline;
+    text-underline-offset: 0.25em;
+}
+
+.welcome {
+    padding: clamp(3rem, 8vw, 7rem) 0;
+    background: linear-gradient(115deg, var(--cream), var(--peach));
+}
+
+.welcome h1 {
+    max-width: 16ch;
+    font-size: clamp(2.75rem, 7vw, 5.75rem);
+    line-height: 1.05;
+}
+
+.welcome .lead {
+    max-width: 60ch;
+    margin-top: 1.25rem;
+}
+
+.carousel {
+    overflow: hidden;
+    border-radius: 1rem;
+    background-color: var(--ink);
+}
+
+.carousel-item img {
+    height: clamp(20rem, 48vw, 33rem);
+    object-fit: cover;
+}
+
+.carousel-caption {
+    bottom: 2.5rem;
+    padding: 0.75rem 1rem;
+    background-color: rgb(24 37 27 / 90%);
+    border-radius: 0.75rem;
+    color: white;
+}
+
+.carousel-caption h3 {
+    margin-bottom: 0.25rem;
+}
+
+.carousel-caption p {
+    margin-bottom: 0;
+}
+
+.services-section {
+    background-color: var(--cream);
+}
+
+.card {
+    overflow: hidden;
+    border: 1px solid var(--clay);
+    border-radius: 1rem;
+    background-color: var(--paper);
+    color: var(--ink);
+}
+
+.card-img-top {
+    width: 100%;
+    aspect-ratio: 3 / 2;
+    object-fit: cover;
+}
+
+.card-body {
+    padding: 1.25rem;
+}
+
+.accordion {
+    --bs-accordion-bg: var(--paper);
+    --bs-accordion-color: var(--ink);
+    --bs-accordion-btn-bg: var(--paper);
+    --bs-accordion-btn-color: var(--ink);
+    --bs-accordion-active-bg: var(--lime);
+    --bs-accordion-active-color: var(--ink);
+    --bs-accordion-border-color: var(--clay);
+}
+
+.accordion-button {
+    font-weight: 600;
+}
+
+/* room for the menu on smaller screens */
+@media (max-width: 991.98px) {
+    html {
+        scroll-padding-top: 12rem;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    html {
+        scroll-behavior: auto;
+    }
+}
